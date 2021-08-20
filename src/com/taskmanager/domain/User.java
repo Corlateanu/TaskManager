@@ -1,6 +1,6 @@
 package com.taskmanager.domain;
 
-public class User {
+public class User implements  java.io.Serializable{
     String firstName;
     String lastName;
     String userName;
@@ -10,7 +10,7 @@ public class User {
         this.lastName = lastName;
         this.userName = userName;
     }
-public String aranjare(){
+public String aranjareUser(){
 
         return firstName + "," + lastName + "," + userName+ "\n";
 

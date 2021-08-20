@@ -1,12 +1,20 @@
 package com.taskmanager.domain;
 
-public class Task {
+public class Task implements java.io.Serializable {
     String taskTitle;
     String userName;
+    String descrpition;
 
-    public Task(String taskTitle, String userName) {
-        this.taskTitle = taskTitle;
+    public Task(String userName, String taskTitle, String descrpition) {
         this.userName = userName;
+        this.taskTitle = taskTitle;
+        this.descrpition = descrpition;
+    }
+
+    public String aranjareTask() {
+
+
+        return userName + "," + taskTitle + "," + descrpition;
     }
 
     public String getTaskTitle() {
@@ -24,4 +32,13 @@ public class Task {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
+    public String getDescrpition() {
+        return descrpition;
+    }
+
+    public void setDescrpition(String descrpition) {
+        this.descrpition = descrpition;
+    }
+
 }

@@ -17,7 +17,7 @@ public class FileUserRepository implements UserRepository {
     public void saveUser(User newUser) {
         try {
             FileWriter myWriter = new FileWriter("filename.txt",true);
-            myWriter.write(newUser.aranjare());
+            myWriter.write(newUser.aranjareUser());
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
